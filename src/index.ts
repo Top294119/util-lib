@@ -1,6 +1,3 @@
-import "./style.css";
-export { sum } from "./sum";
-
 export * as reefState from './reefState';
 export * as network from './network';
 export * as graphql from './graphql';
