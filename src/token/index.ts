@@ -1,16 +1,18 @@
 export {
+    REEF_ADDRESS,
+    REEF_TOKEN,
+    EMPTY_ADDRESS,
+} from './tokenModel';
+export type {
     NFT,
     TokenBalance,
     Token,
     TokenWithAmount,
-    REEF_ADDRESS,
-    REEF_TOKEN,
     ContractType,
     NFTMetadata,
     TransferExtrinsic,
     TokenTransfer,
     BasicToken,
-    EMPTY_ADDRESS,
     ERC721ContractData,
     ERC1155ContractData,
     TokenPrices,
