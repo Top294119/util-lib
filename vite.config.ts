@@ -1,14 +1,21 @@
-import { resolve } from "path";
-import { defineConfig } from "vite";
-import dts from "vite-plugin-dts";
+import { defineConfig } from 'vite';
+import tsconfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
-  build: {
-    lib: {
-      entry: resolve(__dirname, "src/index.ts"),
-      name: "util-lib",
-      fileName: "util-lib",
+  resolve: {
+    alias: {
+      '@': '/src',
+      "@reef-defi/evm-provider": './node_modules/@reef-defi/evm-provider/index.js',
     },
   },
-  plugins: [dts()],
+  plugins: [tsconfigPaths()],
+  build: {
+    outDir: 'dist',
+    sourcemap: true,
+    target: 'es2020',
+    lib: {
+      entry: 'src/index.ts',
+      formats: ['es'],
+    },
+  },
 });
